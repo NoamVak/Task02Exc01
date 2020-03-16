@@ -2,6 +2,7 @@ package com.example.task02exc01;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,18 +11,17 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     Button btn;
-    Random rnd;
+    Random rnd=new Random();
     ImageView iv;
     int x;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        iv=(ImageView)findViewById(R.id.iv);
         btn=(Button)findViewById(R.id.btn);
     }
     public void Click(View view) {
-        Random rnd=new Random();
         x=rnd.nextInt(3)+1;
         if (x==1){
             btn.setText("1");
